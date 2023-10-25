@@ -16,10 +16,32 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 
     $data = [
-        'title' => 'Hello World',
+        'title' => 'Home',
         'paragraph' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit officia vero ullam, dolorem, eius est, rem ad laudantium assumenda consequuntur consequatur eum eveniet quo dignissimos sapiente itaque. Rerum, laborum! Laborum.',
     ];
 
 
     return view('home', $data);
-});
+})->name('home');
+
+Route::get('/about', function () {
+
+    $data = [
+        'title' => 'About',
+        'paragraph' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit officia vero ullam, dolorem, eius est, rem ad laudantium assumenda consequuntur consequatur eum eveniet quo dignissimos sapiente itaque. Rerum, laborum! Laborum.',
+    ];
+
+
+    return view('about', $data);
+})->name('about');
+
+Route::get('/contacts', function () {
+
+    $data = [
+        'title' => 'Contacts',
+        'paragraph' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit officia vero ullam, dolorem, eius est, rem ad laudantium assumenda consequuntur consequatur eum eveniet quo dignissimos sapiente itaque. Rerum, laborum! Laborum.',
+    ];
+
+
+    return view('contacts', $data);
+})->name('contacts');
