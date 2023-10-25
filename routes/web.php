@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $data = [
+        'title' => 'Hello World',
+        'paragraph' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit officia vero ullam, dolorem, eius est, rem ad laudantium assumenda consequuntur consequatur eum eveniet quo dignissimos sapiente itaque. Rerum, laborum! Laborum.',
+    ];
+
+
+    return view('home', $data);
 });
